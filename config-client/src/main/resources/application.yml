@@ -1,0 +1,19 @@
+
+
+server:
+  port: 8089
+
+spring:
+  application:
+    name: configtest-dev
+
+  config:
+    import: optional:configserver:http://localhost:9900
+
+---
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
